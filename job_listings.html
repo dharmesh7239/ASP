@@ -1,0 +1,17 @@
+<!-- myapp/templates/myapp/job_listings.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+</head>
+<body>
+    <h1>Job Listings</h1>
+    <ul>
+        {% for job in job_listings %}
+            <li>
+                <a href="{% url 'job_detail' job.id %}">{{ job.title }} at {{ job.company }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
